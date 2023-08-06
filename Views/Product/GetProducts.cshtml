@@ -1,0 +1,50 @@
+﻿@using Mvc_Example.Extensions
+@*Buradada Extensions olarak verilen veri için bu şekilde using yapılmalıdır *@
+
+@addTagHelper * , Mvc_Example
+@addTagHelper * , Microsoft.AspNetCore.Mvc.TagHelpers 
+@*TagHelper için kütüphanesi import edilmeli*@
+
+@*View Model için klasik kullanımıdır*@
+
+@*@model Mvc_Example.Models.ViewModels.UserProduct
+
+<h5>@Model.Product.ProductName</h5>
+<h5>@Model.User.Name</h5>*@
+
+@*Turple nesnesi için oluşturması gerekenler*@
+
+@*@model (Mvc_Example.Models.Product p,Mvc_Example.Models.User u)
+
+<h5>@Model.p.ProductName</h5>
+<h5>@Model.u.Name</h5> 
+*@
+
+@*@Html.Partial("~/Views/Product/PartialView/ListPartial.cshtml") @*Partial işlemi ile başka html in içine bir tanımlama yaplılacaktır*@ 
+
+
+@*@Html.TextBox("textName",null,new { style = "background-color:green; color:white"})*@
+
+@*Customize edilebir bir texbox örneği*@
+
+@*@Html.CustomTextBox("textCustom","Soykan","Adınız ?")*@
+
+
+@*@Html.BeginForm("Index", "Product",FormMethod.Post);*@
+@*Bu şekilde işlemi server tabanlı oluşturucak ve bu maliyeti ortadan kaldırmak içim *@
+
+@*Vu sefer view tabanlı oluşturulacak bir durum oluşturur ve html helper a göre daha kullanışlıdır*@ 
+@*<form asp-action="Index" asp-controller="Product" method="post">
+    İçerideki html kısmı için tag helper yapıları kullanılabilir 
+</form>*@
+
+
+@*TagHelper sayesinde cache mekanızmasıda bu şekilde olşturulabilir *@
+@*<cache>
+    Cache: @DateTime.Now
+</cache>
+<br />
+@DateTime.Now*@
+
+@*Customize edilmiş tag helper bu kısımda bulunmaktadır *@
+<email a = "abc" mail="soykan@gmail.com" display="Mail Adresim"></email>   

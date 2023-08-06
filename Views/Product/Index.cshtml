@@ -1,0 +1,41 @@
+﻿@*Model Bazı veri İletimi*@
+
+@*@model List<Mvc_Example.Models.Product>
+
+
+<ul>
+    @foreach (var product in Model)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul>*@
+
+@*ViewBag veri İletimi*@
+
+<ul>
+    @foreach (var product in ViewBag.products as List<Mvc_Example.Models.Product>)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul>
+
+
+@*ViewData İletimi*@
+
+<ul>
+    @foreach (var product in ViewData["products"] as List<Mvc_Example.Models.Product>)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul>
+
+
+@*ViewTempData İletimi*@
+
+<ul>
+    @foreach (var product in TempData["products"] as List<Mvc_Example.Models.Product>)
+    {
+        <li>@product.ProductName</li>
+    }
+</ul>
+
