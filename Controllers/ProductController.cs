@@ -37,12 +37,12 @@ namespace Mvc_Example.Controllers
         //public PartialViewResult GetProducts()
         //{
         //    PartialViewResult result = PartialView();
-        //    return reult;
+        //    return result;
         //}
 
         #endregion
 
-        #region JsonResukt
+        #region JsonResult
 
         //public JsonResult GetProducts()
         //{
