@@ -29,7 +29,7 @@ namespace Mvc_Example.Controllers
 
         #endregion
 
-        #region PartielViewResult
+         #region PartielViewResult
 
         //Client Tabanlı Ajax isteklerinde yapılıyorsa bu sistemin kullanımına yatkındır 
         // Böyle olmasının sbebi bir parca da render edilmesi gerekmete ise doğrudan tüm render ı yapıcağına parça render edilir 
